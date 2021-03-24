@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/splatoon-figurines": {
+    "/products": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Splatoon-figurine"
+          "Product"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Splatoon-figurine"
+          "Product"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSplatoon-figurine"
+                "$ref": "#/components/schemas/NewProduct"
               }
             }
           }
         }
       }
     },
-    "/splatoon-figurines/count": {
+    "/products/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Splatoon-figurine"
+          "product"
         ],
         "parameters": []
       }
     },
-    "/splatoon-figurines/{id}": {
+    "/products/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Splatoon-figurine"
+          "Product"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Splatoon-figurine"
+          "Product"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSplatoon-figurine"
+                "$ref": "#/components/schemas/NewProduct"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Splatoon-figurine"
+          "Product"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Splatoon-figurine": {
+      "Product": {
         "required": [
           "id"
         ],
@@ -623,7 +623,7 @@
           }
         }
       },
-      "NewSplatoon-figurine": {
+      "NewProduct": {
         "properties": {
           "name": {
             "type": "string"

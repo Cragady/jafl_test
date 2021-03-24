@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/splatoon-figurines",
-      "handler": "splatoon-figurine.find",
+      "path": "/products",
+      "handler": "product.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/splatoon-figurines/count",
-      "handler": "splatoon-figurine.count",
+      "path": "/products/count",
+      "handler": "product.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/splatoon-figurines/:id",
-      "handler": "splatoon-figurine.findOne",
+      "path": "/products/:id",
+      "handler": "product.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/splatoon-figurines",
-      "handler": "splatoon-figurine.create",
+      "path": "/products",
+      "handler": "product.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/splatoon-figurines/:id",
-      "handler": "splatoon-figurine.update",
+      "path": "/products/:id",
+      "handler": "product.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/splatoon-figurines/:id",
-      "handler": "splatoon-figurine.delete",
+      "path": "/products/:id",
+      "handler": "product.delete",
       "config": {
         "policies": []
       }
