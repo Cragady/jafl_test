@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/splatoon-figurines",
+      "handler": "splatoon-figurine.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/splatoon-figurines/count",
+      "handler": "splatoon-figurine.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/splatoon-figurines/:id",
+      "handler": "splatoon-figurine.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/splatoon-figurines",
+      "handler": "splatoon-figurine.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/splatoon-figurines/:id",
+      "handler": "splatoon-figurine.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/splatoon-figurines/:id",
+      "handler": "splatoon-figurine.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

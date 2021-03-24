@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fast-food-version-of-therapies",
+      "handler": "fast-food-version-of-therapy.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fast-food-version-of-therapies/count",
+      "handler": "fast-food-version-of-therapy.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fast-food-version-of-therapies/:id",
+      "handler": "fast-food-version-of-therapy.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fast-food-version-of-therapies",
+      "handler": "fast-food-version-of-therapy.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fast-food-version-of-therapies/:id",
+      "handler": "fast-food-version-of-therapy.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fast-food-version-of-therapies/:id",
+      "handler": "fast-food-version-of-therapy.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

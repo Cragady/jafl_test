@@ -10,6 +10,7 @@ app-hcp-production-template-1616179744.json
 .alias_rs
 *.secret.*
 secret.*
+assets-root/
 
 
 # Boiler Ignore
