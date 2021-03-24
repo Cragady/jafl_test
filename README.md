@@ -21,7 +21,7 @@ NOTE: Remove the `strapi` field in the package.json file to opt-out of strapi's 
   },
 ```
 
-For this project, I'm looking to use `strapi`, a CMS that can work with any language or framework. At least that's what they claim. I may have some convoluted data flows in this project, but this is mostly for the purpose of demonstrating my ability to make several different technologies working together.
+For this project, I'm looking to use `strapi`, a CMS that can work with any language or framework. At least that's what they claim. I may have some convoluted data flows in this project, but this is mostly for the purpose of demonstrating my ability to make several different technologies work together.
 
  
 
