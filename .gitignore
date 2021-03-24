@@ -1,6 +1,7 @@
 # Custom
 node_modules/
 *.env
+*.env.*
 .a.*
 .serverless/
 env2/
