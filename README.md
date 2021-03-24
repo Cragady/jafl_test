@@ -10,7 +10,7 @@ This is very important. Make sure every time you make a new virtual environment,
 * `python -m pip install -U setuptools`
 
  
-# Frontend/Backend/CMS 
+# Backend/CMS 
 
 NOTE: Remove the `strapi` field in the package.json file to opt-out of strapi's data collection feature. It will look something like this:
 
