@@ -1,6 +1,8 @@
 # Overview
 
-I'm going to be developing this bassackwards, at least from how it seems to me. I'll be developing the frontend first, or at least developing using the CMS first since the CMS is it's own backend anyway.
+I'm going to be developing this a slight bit backwards, at least from how it seems to me. I'll be developing the frontend first, or at least developing using the CMS first since the CMS is it's own backend anyway.
+
+This is my first time working with a CMS in this manner, so the workflow is fairly interesting
 
 # Starter Note for Backend
 
