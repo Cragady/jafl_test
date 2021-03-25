@@ -6,7 +6,7 @@ from .main.controller.transaction_controller import api as transaction_ns
 blueprint = Blueprint('api', __name__)
 
 api = Api(blueprint,
-    title='JOB TRACKER',
+    title='TRANSACTION TRACKER',
     version='1.0',
     description='A rest api that will work as a backend for keeping track of transactions.'
     )

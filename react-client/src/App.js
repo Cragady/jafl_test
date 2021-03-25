@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import CmsAPI from './utils/CmsAPI';
+import { CmsAPI, PyAPI } from './utils';
 import { useCallback } from 'react';
 
 function App() {
@@ -11,6 +11,16 @@ function App() {
       })
       .catch(err => {
         console.error("There was an error in the API.\n" + err);
+      })
+  }, []);
+
+  const logTransactions = useCallback(() => {
+    PyAPI.getTransactions()
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.error("There was an error in the PyFlask API.\n" + err);
       })
   }, []);
 
@@ -36,6 +46,7 @@ function App() {
         </p>
         
         <button onClick={logProducts}>Click me for API</button>
+        <button onClick={logTransactions}>Click me for PyAPI</button>
         
       </header>
     </div>

@@ -49,6 +49,12 @@ The frontend is build on React, and will interact with `strappi` and the `python
 
 
 
+# Possible Useful Links
+
+[React on AWS](https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-one/)
+
+
+
 # Future Updates
 
 This project may or may not receive further updates. If it does, it will have a more exstensive data structure and pipelines for moving the data around. Right now I'm more concerned with getting something basic off of the ground.
