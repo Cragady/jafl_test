@@ -1,5 +1,7 @@
 [Back to Readme](../README.md)
 
+[Deployment and other links here.](#Further%20Links)
+
 ## From Scratch
 
 If you are starting from scratch, remove the `strapi` field in the package.json file to opt-out of strapi's data collection feature. It will look something like this:
@@ -42,10 +44,20 @@ This is the default directory structure for `strapi`
 * `/node_modules`: contains the npm packages used by the project.
 
 
+
+# Further Links
+
+[Link to Backend customization.](https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#routing)
+
+[Link to deploying to AWS.](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/amazon-aws.html)
+
 [Link to quick start for strapi.](https://strapi.io/documentation/developer-docs/latest/getting-started/quick-start.html)
 
 [Link to interacting with React.](https://strapi.io/documentation/developer-docs/latest/developer-resources/content-api/integrations/react.html)
 
-[Link to deploying to AWS.](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/amazon-aws.html)
+[Link to interacting with the CMS via Python.](https://strapi.io/documentation/developer-docs/latest/developer-resources/content-api/integrations/python.html)
+
+[Link to Backend customization.](https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#routing)
+
 
 [Back to Readme](../README.md)
