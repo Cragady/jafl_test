@@ -29,7 +29,7 @@ Otherwise, just install from `requirements.txt`.
 
 
 
-[Link to my python docs.](docs/python-flask_api.md)
+[Link to my Python docs.](docs/python-flask_api.md)
 
 # Frontend
 
