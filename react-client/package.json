@@ -15,12 +15,15 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "cp env-secret/.dev.env .env && react-scripts start",
+    "dev-swap": "cp env-secret/.dev.env .env",
+    "prod-swap": "cp env-secret/.prod.env .env",
+    "start": "yarn dev-swap && react-scripts start",
     "build": "react-scripts build",
+    "dev-build": "yarn dev-swap && yarn serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prod-build": "cp env-secret/.prod.env .env && yarn build",
-    "prod-start": "cp env-secret/.prod.env .env && react-scripts start"
+    "prod-build": "yarn prod-swap && yarn build",
+    "prod-start": "yarn prod-swap && react-scripts start"
   },
   "eslintConfig": {
     "extends": [

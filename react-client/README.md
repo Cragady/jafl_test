@@ -1,10 +1,22 @@
+[Back to overall Readme](../README.md)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
+For the `build` and `test` commands, make sure you have the appropriate environment variables loaded.
+
 In the project directory, you can run:
+
+### `yarn dev-swap`
+
+Copies your `.dev.env` file to the project's `.env` file.
+
+### `yarn prod-swap`
+
+Copies your `.prod.env` file to the project's `.env` file.
 
 ### `yarn start`
 
@@ -28,6 +40,12 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn dev-build`
+
+Builds the app, mimicking the build command. This will load the `.dev.env` to the project's `.env` from the `env-secret` directory.
+
+After the build is finished, it will then serve out the build. This is just an extra step to ensure that the production build and the developmental versions are satisfactory before a push to production.
 
 ### `yarn eject`
 
@@ -68,3 +86,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+[Back to overall Readme](../README.md)
