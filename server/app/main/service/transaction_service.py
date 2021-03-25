@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime, timezone
 
 from app.main import db
 from app.main.model.transaction import Transaction
@@ -13,11 +13,15 @@ def save_new_transaction(data: Dict[str, str,]) -> Tuple[Dict[str, str], int]:
     response_code = 409
 
     if not transaction:
+        insert_updated_at = data['updated_at']
+        if insert_updated_at == '':
+            insert_updated_at = datetime.now(timezone.utc)
+            
         new_transaction = Transaction(
             date=data['date'],
             items=data['items'],
             total=data['total'],
-            updated_at=datetime.now(datetime.timezone.utc)
+            updated_at=insert_updated_at
         )
         save_changes(new_transaction)
         response_object = {
@@ -52,13 +56,13 @@ def save_update(id, data: Dict[str, str]) -> None:
 def get_all_transactions():
     return Transaction.query.all()
 
-def get_an_transaction(id):
+def get_a_transaction(id):
     return Transaction.query.filter_by(id=id).first()
 
 def save_changes(data: Transaction) -> None:
     db.session.add(data)
     db.session.commit()
 
-def delete_an_transaction(data: Transaction) -> None:
+def delete_a_transaction(data: Transaction) -> None:
     db.session.delete(data)
     db.session.commit()

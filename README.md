@@ -35,6 +35,10 @@ Otherwise, just install from `requirements.txt`.
 
 I'm going to have an interesting setup for the database structures. At least initially. At this stage, I will be using two different databases, in the future this project will work off of one database when I can create a proper database management system.
 
+I'm a huge fan of having a singular source of truth, but I don't want two different applications running migrations on the database until I have a better understanding on what's happening. Once I write some test MySQL scripts and play around with the migrations and feel comfortable with it, I'll merge the two different systems.
+
+One solution is to have the python api written around the database structure that is created with strapi, but I want a better solution than that.
+
 # Frontend
 
 The frontend is build on React, and will interact with `strappi` and the `python-flask api`.

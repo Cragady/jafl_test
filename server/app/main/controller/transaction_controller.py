@@ -2,7 +2,7 @@ from flask import request
 from flask_restx import Resource
 
 from ..util.dto import TransactionDto
-from app.main.service.transaction_service import save_new_transaction, get_all_transactions, get_an_transaction, delete_an_transaction, save_update
+from app.main.service.transaction_service import save_new_transaction, get_all_transactions, get_a_transaction, delete_a_transaction, save_update
 from typing import Dict, Tuple
 
 api = TransactionDto.api
@@ -27,22 +27,22 @@ class TransactionList(Resource):
 @api.param('id', 'The Transaction identifier')
 @api.response(404, 'Transaction not found.')
 class Transaction(Resource):
-    @api.doc('get an transaction')
+    @api.doc('get a transaction')
     @api.marshal_with(_transaction)
     def get(self, id):
-        transaction = get_an_transaction(id)
+        transaction = get_a_transaction(id)
         if not transaction:
             api.abort(404, 'Transaction not found.')
         else:
             return transaction
 
-    @api.doc('delete an transaction')
+    @api.doc('delete a transaction')
     def delete(self, id):
-        transaction = get_an_transaction(id)
+        transaction = get_a_transaction(id)
         if not transaction:
             api.abort(404, 'Transaction not found.')
         else:
-            delete_an_transaction(transaction)
+            delete_a_transaction(transaction)
             return ({
                 'status': 'success',
                 'message': 'Successfully deleted transaction.'
@@ -50,7 +50,7 @@ class Transaction(Resource):
 
     @api.expect(_transaction, validate=True)
     @api.response(201, 'Transaction successfully updated.')
-    @api.doc('update an transaction')
+    @api.doc('update a transaction')
     def post(self, id) -> Tuple[Dict[str, str], int]:
         data = request.json
         return save_update(id, data=data)
