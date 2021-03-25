@@ -1,13 +1,11 @@
 from flask_restx import Namespace, fields
 
-class Boiler:
-    api = Namespace('boiler', description='boiler elated operations')
-    boiler = api.model('boiler', {
-        'id': fields.String(description='boiler id'),
-        'field1': fields.String(description='field description'),
-        'field2': fields.String(description='field description'),
-        'field3': fields.String(description='field description'),
-        'field4': fields.String(description='field description'),
-        'field5': fields.String(description='field description'),
-        'field6': fields.String(description='field description')
+class TransactionDto:
+    api = Namespace('transaction', description='transaction related operations')
+    transaction = api.model('transaction', {
+        'id': fields.String(description='transaction id'),
+        'date': fields.String(description='date transaction took place'),
+        'items': fields.String(description='Items and Quantity of each item, array of objects'),
+        'total': fields.String(description='total of items purchased'),
+        'updated_at': fields.String(description='time of update')
     })

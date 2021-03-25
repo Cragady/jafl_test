@@ -1,7 +1,7 @@
 from flask_restx import Api
 from flask import Blueprint
 
-# from .main.controller.boiler_controller import api as boiler_ns
+from .main.controller.transaction_controller import api as transaction_ns
 
 blueprint = Blueprint('api', __name__)
 
@@ -11,4 +11,4 @@ api = Api(blueprint,
     description='A rest api that will work as a backend for keeping track of transactions.'
     )
 
-# api.add_namespace(boiler_ns, path='/boiler')
+api.add_namespace(transaction_ns, path='/transaction')

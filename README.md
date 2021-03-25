@@ -31,6 +31,10 @@ Otherwise, just install from `requirements.txt`.
 
 [Link to my Python docs.](docs/python-flask_api.md)
 
+## Database
+
+I'm going to have an interesting setup for the database structures. At least initially. At this stage, I will be using two different databases, in the future this project will work off of one database when I can create a proper database management system.
+
 # Frontend
 
 The frontend is build on React, and will interact with `strappi` and the `python-flask api`.
