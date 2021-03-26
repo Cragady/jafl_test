@@ -2,6 +2,20 @@
     background: whitesmoke;
 }
 
+.Product-container {
+    background: rgba(110, 67, 26, 0.13);
+}
+
 .Product-img {
     max-height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Product-description {
+    background: rgba(116, 113, 102, 0.144);
+}
+
+.Product-point-text {
+    font-weight: bold;
 }
