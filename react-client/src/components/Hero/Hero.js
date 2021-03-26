@@ -9,7 +9,7 @@ export const Hero = function(props) {
             <h2 className="Hero-v1 Hero-text">Look At This!</h2>
             <h3 className="Hero-v2 Hero-text">Mega Buying Deal!</h3>
             <h2 className="Hero-v3 Hero-text">BUY THE HEROES!</h2>
-            <a href={"/product/" + prom.id}><button className="btn btn-success Hero-btn">Gotta Click</button></a>
+            <a href={"/product/prdsrv+id=" + prom.id}><button className="btn btn-success Hero-btn">Gotta Click</button></a>
         </section>
     )
 }

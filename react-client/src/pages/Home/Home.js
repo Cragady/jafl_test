@@ -56,7 +56,7 @@ export class Home extends Component {
 
                     <div className="Home-imgs-container row no-gutters">
                         {imgsPass && imgs.map((img, i) => {
-                            return(<a key={"Home-anchor-img-" + i} href={"/product/" + img.id}><img className="Home-imgs-row img-fluid" src={img.url} alt={"Image row " + img.name} /></a>)
+                            return(<a key={"Home-anchor-img-" + i} href={"/product/prdsrv+id=" + img.id}><img className="Home-imgs-row img-fluid" src={img.url} alt={"Image row " + img.name} /></a>)
                         })}
                     </div>
 
