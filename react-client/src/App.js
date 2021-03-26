@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PreHome from './pages/PreHome/PreHome';
 import Home from './pages/Home/Home';
 import Nav from './components/Nav/Nav';
-import { CmsAPI, PyAPI } from './utils';
+import { CmsAPI } from './utils';
 
 class App extends Component {
   state = {
@@ -29,15 +29,14 @@ class App extends Component {
   render() {
     const products = this.state.products;
     const promoted = [];
-    const regular_products = [];
+    const all_products = [];
 
     products !== undefined && products.length > 0 && products.forEach(product => {
       if(product.promoted){
-        console.log(product);
         promoted.push(product);
       }
 
-      regular_products.push(product);
+      all_products.push(product);
 
     })
     return (
@@ -52,13 +51,13 @@ class App extends Component {
             <Route exact path="/prehome" component={ PreHome }/>
             
   
-            <Route exact path="/hallo"
+  
+            <Route exact path="/" render={(props) => { return <Home promoted={promoted} products={all_products} /> } } />
+  
+            <Route path="/"
               render={() => {
                 return <div>Hallo, you shouldn't be here. <a href="/">Please go back.</a></div>
             }} />
-  
-            <Route exact path="/" render={(props) => { return <Home promoted={promoted} /> } } />
-  
   
           </Switch>
         </Router>

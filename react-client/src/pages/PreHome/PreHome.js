@@ -34,7 +34,8 @@ function PreHome() {
                 <p>
                     The purpose of this is to display an understanding of
                     how to put together a React frontend that interacts
-                    with a CMS.
+                    with a CMS. There's also a Python Api that this application
+                    interacts with.
                 </p>
 
                 <p>

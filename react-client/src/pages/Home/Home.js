@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import { CmsAPI, PyAPI } from '../../utils';
-import { useCallback } from 'react';
+// import { CmsAPI, PyAPI } from '../../utils';
 import Hero from '../../components/Hero/Hero';
 import './Home.css';
 
 class Home extends Component {
-    constructor(props){
-        super(props);
-    }
     
     render() {
         
-        const { promoted } = this.props;
+        const { promoted, products } = this.props;
         let prom, promPass = promoted.length > 0;
+        let prods = [], imgs = [], imgsPass, prodsPass = products.length > 0;
         if(promPass) {
             prom = promoted[0];
         };
+        if(prodsPass) {
+            products.forEach(prod => {
+                imgs.push({id: prod.id, name: prod.name, url: process.env.REACT_APP_CMS_API + prod.picture[0].url})
+                prods.push(prod);
+            })
+        }
+
+        imgsPass = imgs.length > 0;
 
         return(
             <section className="Home">
@@ -28,7 +33,7 @@ class Home extends Component {
 
                     <div className="Home-subsection row no-gutters">
                         <div className="col-4">
-                            <p className="h3">Product Section</p>
+                            <p className="h3">Products</p>
 
                             <p>
                                 We have trillions of Products
@@ -37,14 +42,22 @@ class Home extends Component {
                         </div>
 
                         <div className="col-4">
-                            <p className="h3">Therapy Section</p>
+                            <p className="h3">Therapy</p>
 
                             <p>
                                 We have therapies for sale,
                                 therapies that other experts
-                                have often looked over.
+                                have often looked over!
                             </p>
                         </div>
+                    </div>
+                    
+                    <p className="h2 mb-5"><a href="/products">Browse All Selections</a></p>
+
+                    <div className="Home-imgs-container row no-gutters">
+                        {imgsPass && imgs.map((img, i) => {
+                            return(<a key={"Home-anchor-img-" + i} href={"/product/" + img.id}><img className="Home-imgs-row img-fluid" src={img.url} alt={"Image row " + img.name} /></a>)
+                        })}
                     </div>
 
                 </section>

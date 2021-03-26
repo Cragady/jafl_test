@@ -10,3 +10,13 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+.Home-imgs-container {
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.Home-imgs-row {    
+    max-height: 150px;
+    margin-bottom: 15px;
+}
