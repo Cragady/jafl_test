@@ -34,7 +34,7 @@ export class Therapy extends Component {
                     <h2>Description</h2>
                     <p className="Therapy-description rounded p-3">{description}</p>
                     <p><span className="Therapy-point-text">Hourly Price:</span> {hourly_price}</p>
-                    <p><span className="Therapy-point-text">Available:</span> {date_available}</p>
+                    <p><span className="Therapy-point-text">Date Available:</span> {date_available}</p>
                     <button className="btn btn-primary Therapy-btn mb-3">Add to Cart</button>
                 </div>
             </section>
