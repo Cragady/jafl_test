@@ -1,0 +1,12 @@
+.Home {
+    background: whitesmoke;
+}
+
+.Home-subsection {
+    text-align: center;
+}
+
+.Home-subsection > div {
+    margin-right: auto;
+    margin-left: auto;
+}
