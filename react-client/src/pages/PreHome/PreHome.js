@@ -2,7 +2,7 @@ import { CmsAPI, PyAPI } from '../../utils';
 import { useCallback } from 'react';
 import './PreHome.css';
 
-function PreHome() {
+export const PreHome = function() {
 
     const logProducts = useCallback(() => {
         CmsAPI.getProducts()
@@ -60,4 +60,3 @@ function PreHome() {
     );
 }
 
-export default PreHome;

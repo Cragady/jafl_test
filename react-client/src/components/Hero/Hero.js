@@ -1,6 +1,6 @@
 import './Hero.css';
 
-function Hero(props) {
+export const Hero = function(props) {
     const { prom } = props;
 
     return(
@@ -14,4 +14,3 @@ function Hero(props) {
     )
 }
 
-export default Hero;

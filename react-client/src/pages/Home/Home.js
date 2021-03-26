@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // import { CmsAPI, PyAPI } from '../../utils';
-import Hero from '../../components/Hero/Hero';
+import { Hero } from '../../components';
 import './Home.css';
 
-class Home extends Component {
+export class Home extends Component {
     
     render() {
         
@@ -67,4 +67,3 @@ class Home extends Component {
     };
 }
 
-export default Home;
