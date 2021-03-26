@@ -1,0 +1,15 @@
+.Therapy-section {
+    background: whitesmoke;
+}
+
+.Therapy-container {
+    background: rgba(110, 67, 26, 0.13);
+}
+
+.Therapy-description {
+    background: rgba(116, 113, 102, 0.144);
+}
+
+.Therapy-point-text {
+    font-weight: bold;
+}
