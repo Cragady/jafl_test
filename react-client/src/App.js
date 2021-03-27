@@ -6,23 +6,21 @@ import { CmsAPI } from './utils';
 
 class App extends Component {
   state = {
-    products: []
+    products: [],
+    therapies: []
   }
 
   componentDidMount(){
-    this.grabProducts();
-  }
-
-  grabProducts = () => {
-    CmsAPI.getProducts()
+    Promise.all([CmsAPI.getProducts(), CmsAPI.getTherapies()])
       .then(res => {
         this.setState({
-          products: res.data
+          products: res[0].data,
+          therapies: res[1].data
         })
       })
       .catch(err => {
-        console.error(err);
-      });
+        console.log(err);
+      })
   }
 
   render() {
