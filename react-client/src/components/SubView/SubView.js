@@ -6,16 +6,20 @@ export class SubView extends Component {
 
     render() {
         const { name, picture, description, prodType, id } = this.props.allProds;
+        let prodUrl = `/${prodType}/prdsrv+id=${id}`
         return(
             <section className="SubView-section rounded m-3">
 
-                { name && <p className="h4">{name}</p> }
+                { name && <a href={prodUrl}><p className="h4">{name}</p></a> }
                 <div className="row no-gutters">
-                    { picture && <img className="SubView-img img-fluid mb-5" alt={"product " + name} src={CmsAPI.CmsUrl + picture[0].url} />}
+                    { picture && <div className="img-overlay-cust">
+                        <a href={prodUrl}><img className="SubView-img img-fluid" alt={"product " + name} src={CmsAPI.CmsUrl + picture[0].url} /></a>
+                        <a href={prodUrl}><div className="view-destroyer">&nbsp;</div></a>
+                    </div>}
                     { description && <p className="col ml-5 mb-5">{description}</p>}
                 </div>
 
-                <a href={"/" + prodType + "/prdsrv+id=" + id}><button className="btn btn-success">Check it out!</button></a>
+                <a href={prodUrl}><button className="btn btn-success mt-5">Check it out!</button></a>
                 
             </section>
         )

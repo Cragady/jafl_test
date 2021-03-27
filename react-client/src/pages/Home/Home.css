@@ -18,5 +18,28 @@
 
 .Home-imgs-row {    
     max-height: 150px;
-    margin-bottom: 15px;
+    width: auto;
+    /* margin-bottom: 15px; */
+}
+
+.Home-imgs-subcontainer {
+    position: relative;
+    height: 100%;
+}
+
+.Home-destroyer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.2s ease-out;
+    -webkit-transition: background 0.2s ease-out;
+    -moz-transition: background 0.2s ease-out;
+    -o-transition: background 0.2s ease-out;
+}
+
+.Home-imgs-subcontainer:hover .Home-destroyer {
+    background: rgba(0, 0, 0, 0.644);
 }

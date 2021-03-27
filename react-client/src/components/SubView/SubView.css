@@ -3,6 +3,38 @@
     padding: 10px;
 }
 
+.SubView-section > a {
+    color: black;
+    text-decoration: none;
+}
+
+.SubView-section > a:hover {
+    color: black;
+}
+
+.img-overlay-cust {
+    position: relative;
+    height: 100%;
+}
+
 .SubView-img {
     max-height: 150px;
+    width: auto;
+}
+
+.view-destroyer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.2s ease-out;
+    -webkit-transition: background 0.2s ease-out;
+    -moz-transition: background 0.2s ease-out;
+    -o-transition: background 0.2s ease-out;
+}
+
+.img-overlay-cust:hover .view-destroyer {
+    background: rgba(0, 0, 0, 0.644);
 }

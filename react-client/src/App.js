@@ -7,7 +7,8 @@ import { CmsAPI } from './utils';
 class App extends Component {
   state = {
     products: [],
-    therapies: []
+    therapies: [],
+    cart: []
   }
 
   componentDidMount(){
