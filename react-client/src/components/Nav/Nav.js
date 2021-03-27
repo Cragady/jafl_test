@@ -44,10 +44,10 @@ export class Nav extends Component {
     
                     <li className="nav-item li-item-cust">
                         <Link
-                            to="/prehome"
-                            children="Test Home"
+                            to="/transactions"
+                            children="Transactions"
                             className={
-                                pathname === "/prehome" ? "nav-link active" : "nav-link inactive"
+                                pathname === "/transactions" ? "nav-link active" : "nav-link inactive"
                             }
                             onClick={this.switchSwapper}
                         />
