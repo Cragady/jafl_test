@@ -27,10 +27,11 @@ export class Therapy extends Component {
             therapy_component = null;
 
         if(therapy_pass) {
-            const { date_available, description, hourly_price, name } = therapy_state;
+            const { date_available, description, hourly_price, name, picture } = therapy_state;
             therapy_component = <section className="Therapy-section pt-3">
                 <div className="container rounded Therapy-container">
                     <h1>{name}</h1>
+                    <img className="Therapy-img img-fluid mb-3" src={CmsAPI.CmsUrl + picture[0].url} alt={"Therapy image " + name} />
                     <h2>Description</h2>
                     <p className="Therapy-description rounded p-3">{description}</p>
                     <p><span className="Therapy-point-text">Hourly Price:</span> {hourly_price}</p>

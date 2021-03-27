@@ -1,0 +1,11 @@
+.ProductsList-section {
+    background: whitesmoke;
+}
+
+.ProductsList-h1 {
+    text-align: center;
+}
+
+.ProductsList-dump {
+    justify-content: space-evenly;
+}

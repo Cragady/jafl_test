@@ -53,7 +53,7 @@ class App extends Component {
 
             <Route path="/transactions" component={ Transactions } />
 
-            <Route path="/productslist" component={ ProductsList } />
+            <Route path="/productslist" render={props => { return <ProductsList products={this.state.products} therapies={this.state.therapies} />}} />
 
             <Route path="/cart" component={ Cart } />
   

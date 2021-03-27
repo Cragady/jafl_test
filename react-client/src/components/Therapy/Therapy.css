@@ -6,6 +6,10 @@
     background: rgba(110, 67, 26, 0.13);
 }
 
+.Therapy-img {
+    max-height: 300px;
+}
+
 .Therapy-description {
     background: rgba(116, 113, 102, 0.144);
 }
