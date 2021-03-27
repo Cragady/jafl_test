@@ -5,12 +5,17 @@ import './SubView.css';
 export class SubView extends Component {
 
     render() {
-        const { name, picture } = this.props.allProds;
+        const { name, picture, description, prodType, id } = this.props.allProds;
         return(
-            <section className="Subview-section m-3">
+            <section className="SubView-section rounded m-3">
 
                 { name && <p className="h4">{name}</p> }
-                { picture && <img className="SubView-img img-fluid" alt={"product " + name} src={CmsAPI.CmsUrl + picture[0].url} />}
+                <div className="row no-gutters">
+                    { picture && <img className="SubView-img img-fluid mb-5" alt={"product " + name} src={CmsAPI.CmsUrl + picture[0].url} />}
+                    { description && <p className="col ml-5 mb-5">{description}</p>}
+                </div>
+
+                <a href={"/" + prodType + "/prdsrv+id=" + id}><button className="btn btn-success">Check it out!</button></a>
                 
             </section>
         )

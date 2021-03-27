@@ -11,10 +11,12 @@ export class ProductsList extends Component {
             complete_arr = [];
             
         products_pass && products.forEach(prod => {
+            prod.prodType = "product";
             complete_arr.push(prod);
         });
         
         therapies_pass && therapies.forEach(ther => {
+            ther.prodType = "therapy";
             complete_arr.push(ther);
         });
             
