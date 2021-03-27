@@ -53,6 +53,28 @@ export class Nav extends Component {
                         />
                     </li>
     
+                    <li className="nav-item li-item-cust">
+                        <Link
+                            to="/productslist"
+                            children="Products List"
+                            className={
+                                pathname === "/productslist" ? "nav-link active" : "nav-link inactive"
+                            }
+                            onClick={this.switchSwapper}
+                        />
+                    </li>
+    
+                    <li className="nav-item li-item-cust">
+                        <Link
+                            to="/cart"
+                            children="Cart"
+                            className={
+                                pathname === "/cart" ? "nav-link active" : "nav-link inactive"
+                            }
+                            onClick={this.switchSwapper}
+                        />
+                    </li>
+    
     
                 </ul>
             </section>
