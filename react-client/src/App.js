@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, PreHome, Transactions } from './pages';
+import { Home, PreHome, Transactions, ProductsList, Cart} from './pages';
 import { Nav, Product, Therapy } from './components';
 import { CmsAPI } from './utils';
 
@@ -54,6 +54,10 @@ class App extends Component {
             <Route path="/therapy" component={ Therapy } />
 
             <Route path="/transactions" component={ Transactions } />
+
+            <Route path="/productslist" component={ ProductsList } />
+
+            <Route path="/cart" component={ Cart } />
   
             <Route exact path="/" render={(props) => { return <Home promoted={promoted} products={all_products} /> } } />
   

@@ -52,7 +52,7 @@ export class Home extends Component {
                         </div>
                     </div>
                     
-                    <p className="h2 mb-5"><a href="/products">Browse All Selections</a></p>
+                    <p className="h2 mb-5"><a href="/productslist">Browse All Selections</a></p>
 
                     <div className="Home-imgs-container row no-gutters">
                         {imgsPass && imgs.map((img, i) => {
