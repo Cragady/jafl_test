@@ -12,7 +12,7 @@ export class SubView extends Component {
         return(
             <section className="SubView-section rounded m-3">
 
-                { name && <Link to={prodUrl} switchSwapper={switchSwapper} ><p className="h4">{name}</p></Link> }
+                { name && <Link to={prodUrl} onClick={switchSwapper} ><p className="h4">{name}</p></Link> }
                 <div className="row no-gutters">
                     { picture && <div className="img-overlay-cust">
                         <Link to={prodUrl} onClick={switchSwapper} ><img className="SubView-img img-fluid" alt={"product " + name} src={CmsAPI.CmsUrl + picture[0].url} /></Link>

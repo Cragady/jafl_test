@@ -41,7 +41,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.cart)
     const products = this.state.products;
     const promoted = [];
     const all_products = [];
@@ -75,7 +74,7 @@ class App extends Component {
 
             <Route path="/productslist" render={props => { return <ProductsList products={this.state.products} therapies={this.state.therapies} switchSwapper={this.switchSwapper} />}} />
 
-            <Route path="/cart" component={ Cart } />
+            <Route path="/cart" render={props => { return <Cart cart={this.state.cart} /> } } />
   
             <Route exact path="/" render={(props) => { return <Home promoted={promoted} products={all_products} switchSwapper={this.switchSwapper} /> } } />
   

@@ -6,7 +6,7 @@ export const Transaction = function(props) {
     return (
         <section className="Transaction-section rounded">
             <p>id: {id}</p>
-            <p>items(objects arr): {items}</p>
+            <p>number_of_items: {items}</p>
             <p>total: {total}</p>
         </section>
     )

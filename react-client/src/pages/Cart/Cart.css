@@ -1,0 +1,20 @@
+.Cart-section {
+    background: whitesmoke;
+    padding-top: 15px;
+}
+
+.Cart-img {
+    max-height: 50px;
+    width: auto;
+}
+
+.cartlet {
+    background: rgba(51, 255, 0, 0.192);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.totals-section {
+    background: rgba(128, 128, 128, 0.349);
+    padding: 10px;
+}

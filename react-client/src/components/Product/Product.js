@@ -54,7 +54,7 @@ export class Product extends Component {
                             quantity: 1, 
                             price: price, 
                             name: name, 
-                            picture: picture,
+                            picture: picture
                         })
                         }>
                         Add to Cart

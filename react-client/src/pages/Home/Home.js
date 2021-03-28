@@ -57,10 +57,14 @@ export class Home extends Component {
 
                     <div className="Home-imgs-container row no-gutters">
                         {imgsPass && imgs.map((img, i) => {
-                            return(<div className="Home-imgs-subcontainer" key={"Home-anchor-img-" + i}>
-                                <Link to={"/product/prdsrv+id=" + img.id} onClick={switchSwapper} ><img className="Home-imgs-row img-fluid" src={img.url} alt={"Image row " + img.name} /></Link>
-                                <Link to={"/product/prdsrv+id=" + img.id} onClick={switchSwapper} ><div className="Home-destroyer">&nbsp;</div></Link>
-                            </div>)
+                            return(<div key={"Home-anchor-img-" + i}>
+                                <div className="Home-imgs-subcontainer">
+                                    <Link to={"/product/prdsrv+id=" + img.id} onClick={switchSwapper} ><img className="Home-imgs-row img-fluid" src={img.url} alt={"Image row " + img.name} /></Link>
+                                    <Link to={"/product/prdsrv+id=" + img.id} onClick={switchSwapper} ><div className="Home-destroyer">&nbsp;</div></Link>
+                                </div>
+                                <br />
+                            </div>
+                            )
                         })}
                     </div>
 
