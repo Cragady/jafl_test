@@ -1,5 +1,13 @@
 # Overview
 
+I need to further document this project, cause honestly it is a bit convoluted to setup. I will illustrate the basic flow though:
+
+React pulls product data from the strapi API.
+
+React pulls transaction data and updates data to/from the Python/Flask API.
+
+This project is fairly bare-bones right now, there are a lot of improvements that can be made, and some bugs to fix.
+
 I'm going to be developing this a slight bit backwards, at least from how it seems to me. I'll be developing the frontend first, or at least developing using the CMS first since the CMS is it's own backend anyway.
 
 This is my first time working with a CMS in this manner, so the workflow is fairly interesting and new.
@@ -58,3 +66,16 @@ The frontend is build on React, and will interact with `strappi` and the `python
 # Future Updates
 
 This project may or may not receive further updates. If it does, it will have a more exstensive data structure and pipelines for moving the data around. Right now I'm more concerned with getting something basic off of the ground.
+
+
+# Dump of Links I've found Helpful
+
+[Amazon EC2 key pairs and Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair)
+
+[How do I add new user accounts with SSH access to my Amazon EC2 Linux instance?](https://aws.amazon.com/premiumsupport/knowledge-center/new-user-accounts-linux-instance/)
+
+[I'm receiving "Permission denied (publickey)" or "Authentication failed, permission denied" errors when trying to access my EC2 instance. How do I resolve this?](https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-fix-permission-denied-errors/)
+
+[How to Upload an SSH Public Key to an Existing Droplet](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/)
+
+[Strapi docs for AWS](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/amazon-aws.html)
