@@ -12,6 +12,7 @@ export class Nav extends Component {
 
 
                 <ul className="nav nav-cust">
+                                        
                     <li className="nav-item li-item-cust">
                         <Link
                             to="/"
@@ -69,6 +70,16 @@ export class Nav extends Component {
                         </div>
                     </li>
     
+                    {/* <li className="nav-item li-item-cust">
+                        <Link
+                            to="/hallo"
+                            children="hallo"
+                            className={
+                                pathname === "/hallo" ? "nav-link active" : "nav-link inactive"
+                            }
+                            onClick={this.props.switchSwapper}
+                        />
+                    </li> */}
     
                 </ul>
             </section>

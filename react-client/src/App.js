@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home, PreHome, Transactions, ProductsList, Cart} from './pages';
 import { Nav, Product, Therapy } from './components';
 import { CmsAPI, TopScroller } from './utils';
