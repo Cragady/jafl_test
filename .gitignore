@@ -11,6 +11,7 @@ app-hcp-production-template-1616179744.json
 *.secret.*
 secret.*
 assets-root/
+tmp/
 
 
 # Boiler Ignore

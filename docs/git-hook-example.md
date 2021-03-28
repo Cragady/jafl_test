@@ -1,5 +1,6 @@
 ```r (bash)
 #!/bin/bash
+# post-receive
 TARGET="/var/www/<directory>"
 GIT_DIR="/srv/git/repositories/<directory>.git"
 BRANCH="master"
