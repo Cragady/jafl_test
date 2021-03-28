@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Home, PreHome, Transactions, ProductsList, Cart} from './pages';
 import { Nav, Product, Therapy } from './components';
-import { CmsAPI } from './utils';
+import { CmsAPI, TopScroller } from './utils';
 
 class App extends Component {
   state = {
     products: [],
     therapies: [],
-    cart: []
+    cart: [],
+    browserSwitch: true
   }
 
   componentDidMount(){
@@ -24,7 +25,23 @@ class App extends Component {
       })
   }
 
+  switchSwapper = () => {
+    this.setState(prevState => ({
+      browserSwitch: !prevState.browserSwitch
+    }))
+  }
+
+  addToCart = (val) => {
+    this.setState({
+      cart: [
+        ...this.state.cart,
+        val
+      ]
+    })
+  }
+
   render() {
+    console.log(this.state.cart)
     const products = this.state.products;
     const promoted = [];
     const all_products = [];
@@ -42,34 +59,34 @@ class App extends Component {
 
         <Router>
 
-          <Nav />
+          <TopScroller />
+
+          <Nav cartLength={this.state.cart.length} switchSwapper={this.switchSwapper} />
         
           <Switch>
   
             <Route exact path="/prehome" component={ PreHome }/>
             
-            <Route path="/product" component={ Product } />
+            <Route path="/product" render={props => { return <Product addToCart={this.addToCart } /> } } />
 
-            <Route path="/therapy" component={ Therapy } />
+            <Route path="/therapy" render={props => { return <Therapy addToCart={ this.addToCart } /> }} />
 
             <Route path="/transactions" component={ Transactions } />
 
-            <Route path="/productslist" render={props => { return <ProductsList products={this.state.products} therapies={this.state.therapies} />}} />
+            <Route path="/productslist" render={props => { return <ProductsList products={this.state.products} therapies={this.state.therapies} switchSwapper={this.switchSwapper} />}} />
 
             <Route path="/cart" component={ Cart } />
   
-            <Route exact path="/" render={(props) => { return <Home promoted={promoted} products={all_products} /> } } />
+            <Route exact path="/" render={(props) => { return <Home promoted={promoted} products={all_products} switchSwapper={this.switchSwapper} /> } } />
   
             <Route path="/"
               render={() => {
-                return <div>Hallo, you shouldn't be here. <a href="/">Please go back.</a></div>
+                return <div>Hallo, you shouldn't be here. <Link to="/" onClick={this.switchSwapper} >Please go back.</Link></div>
             }} />
   
           </Switch>
         </Router>
-  
-  
-  
+        
       </div>
     );
   }

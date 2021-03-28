@@ -3,15 +3,6 @@ import { Link } from 'react-router-dom';
 import './Nav.css';
 
 export class Nav extends Component {
-    state = {
-        switch: true
-    }
-
-    switchSwapper = () => {
-        this.setState(prevState => ({
-            switch: !prevState.switch
-        }))
-    }
 
     render() {
         const pathname = window.location.pathname;
@@ -27,7 +18,7 @@ export class Nav extends Component {
                             children="ByMoore!"
                             className="Nav-home-icon nav-link active"
                             id="Head-Nav"
-                            onClick={this.switchSwapper}
+                            onClick={this.props.switchSwapper}
                         />
                     </li>
     
@@ -38,7 +29,7 @@ export class Nav extends Component {
                             className={
                                 pathname === "/" ? "nav-link active" : "nav-link inactive"
                             }
-                            onClick={this.switchSwapper}
+                            onClick={this.props.switchSwapper}
                         />
                     </li>
     
@@ -49,7 +40,7 @@ export class Nav extends Component {
                             className={
                                 pathname === "/transactions" ? "nav-link active" : "nav-link inactive"
                             }
-                            onClick={this.switchSwapper}
+                            onClick={this.props.switchSwapper}
                         />
                     </li>
     
@@ -60,19 +51,22 @@ export class Nav extends Component {
                             className={
                                 pathname === "/productslist" ? "nav-link active" : "nav-link inactive"
                             }
-                            onClick={this.switchSwapper}
+                            onClick={this.props.switchSwapper}
                         />
                     </li>
     
                     <li className="nav-item li-item-cust">
-                        <Link
-                            to="/cart"
-                            children="Cart"
-                            className={
-                                pathname === "/cart" ? "nav-link active" : "nav-link inactive"
-                            }
-                            onClick={this.switchSwapper}
-                        />
+                        <div className="Nav-Cart">
+                            <Link
+                                to="/cart"
+                                children="Cart"
+                                className={
+                                    pathname === "/cart" ? "nav-link active Cart-Link" : "nav-link inactive Cart-Link"
+                                }
+                                onClick={this.props.switchSwapper}
+                            />
+                            <Link className="a-popup" to="/cart" onClick={this.props.switchSwapper} ><div className="Cart-Popup">{this.props.cartLength}</div></Link>
+                        </div>
                     </li>
     
     

@@ -21,6 +21,19 @@ export class Product extends Component {
             })
     }
 
+    addProduct = (quantity, data) => {
+        if(data.quantity > quantity){
+            data.quantity = quantity;
+            console.log("Not enough to fulfill entire order, giving what we can.")
+        }
+        if(quantity > 0){
+            this.props.addToCart(data);
+        } else {
+            console.log("Not enough available.")
+        }
+
+    }
+
     render() {
         let product_pass = this.state.product.length > 0,
             product_state = this.state.product[0],
@@ -36,7 +49,16 @@ export class Product extends Component {
                     <p className="Product-description rounded p-3">{description}</p>
                     <p><span className="Product-point-text">Price:</span> {price}</p>
                     <p><span className="Product-point-text">Available:</span> {quantity}</p>
-                    <button className="btn btn-primary Product-btn mb-3">Add to Cart</button>
+                    <button className="btn btn-primary Product-btn mb-3" 
+                        onClick={() => this.addProduct(quantity, {
+                            quantity: 1, 
+                            price: price, 
+                            name: name, 
+                            picture: picture,
+                        })
+                        }>
+                        Add to Cart
+                    </button>
                 </div>
             </section>
         }

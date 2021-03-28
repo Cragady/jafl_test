@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import { CmsAPI, PyAPI } from '../../utils';
+import { Link } from 'react-router-dom';
 import { Hero } from '../../components';
 import './Home.css';
 
@@ -7,7 +8,7 @@ export class Home extends Component {
     
     render() {
         
-        const { promoted, products } = this.props;
+        const { promoted, products, switchSwapper } = this.props;
         let prom, promPass = promoted.length > 0;
         let prods = [], imgs = [], imgsPass, prodsPass = products.length > 0;
         if(promPass) {
@@ -25,7 +26,7 @@ export class Home extends Component {
         return(
             <section className="Home">
 
-                {promPass ? <Hero prom={prom} /> : null}
+                {promPass ? <Hero prom={prom} switchSwapper={switchSwapper} /> : null}
 
                 <section className="text-center">
 
@@ -52,13 +53,13 @@ export class Home extends Component {
                         </div>
                     </div>
                     
-                    <p className="h2 mb-5"><a href="/productslist">Browse All Selections</a></p>
+                    <p className="h2 mb-5"><Link to="/productslist" onClick={switchSwapper} >Browse All Selections</Link></p>
 
                     <div className="Home-imgs-container row no-gutters">
                         {imgsPass && imgs.map((img, i) => {
                             return(<div className="Home-imgs-subcontainer" key={"Home-anchor-img-" + i}>
-                                <a href={"/product/prdsrv+id=" + img.id}><img className="Home-imgs-row img-fluid" src={img.url} alt={"Image row " + img.name} /></a>
-                                <a href={"/product/prdsrv+id=" + img.id}><div className="Home-destroyer">&nbsp;</div></a>
+                                <Link to={"/product/prdsrv+id=" + img.id} onClick={switchSwapper} ><img className="Home-imgs-row img-fluid" src={img.url} alt={"Image row " + img.name} /></Link>
+                                <Link to={"/product/prdsrv+id=" + img.id} onClick={switchSwapper} ><div className="Home-destroyer">&nbsp;</div></Link>
                             </div>)
                         })}
                     </div>

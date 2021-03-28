@@ -28,7 +28,7 @@ export class ProductsList extends Component {
 
                 <section className="ProductsList-dump container ">
                     {complete_pass && complete_arr.map((item, i) => {
-                        return <SubView key={"prod-or-service-" + item.name + "-" + i} allProds={item} />
+                        return <SubView key={"prod-or-service-" + item.name + "-" + i} allProds={item} switchSwapper={this.props.switchSwapper} />
                     })}
                 </section>
             </section>

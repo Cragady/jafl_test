@@ -78,3 +78,33 @@
 .active > .ld {
     font-size: initial;
 }
+
+.Nav-Cart {
+    /* background: red; */
+    position: relative;
+}
+
+.Cart-Link {
+    /* background: red; */
+}
+
+.Cart-Popup {
+    /* background: red; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    background: rgba(187, 189, 159, 0.418);
+    padding: 3px 5px;
+    border-radius: 50%;
+}
+
+.a-popup {
+    color: green;
+    text-decoration: none;
+}
+
+.a-popup:hover {
+    color: rgb(38, 81, 95);
+    text-decoration: none;
+}
