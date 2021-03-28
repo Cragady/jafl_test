@@ -40,6 +40,20 @@ class App extends Component {
     })
   }
 
+  removeFromCart = (id) => {
+    this.setState({
+      cart: this.state.cart.filter((v, i) => {
+        return id !== i
+      })
+    })
+  }
+
+  emptyCart = () => {
+    this.setState({
+      cart: []
+    });
+  }
+
   render() {
     const products = this.state.products;
     const promoted = [];
@@ -74,7 +88,7 @@ class App extends Component {
 
             <Route path="/productslist" render={props => { return <ProductsList products={this.state.products} therapies={this.state.therapies} switchSwapper={this.switchSwapper} />}} />
 
-            <Route path="/cart" render={props => { return <Cart cart={this.state.cart} /> } } />
+            <Route path="/cart" render={props => { return <Cart cart={this.state.cart} removeFromCart={this.removeFromCart} emptyCart={this.emptyCart} /> } } />
   
             <Route exact path="/" render={(props) => { return <Home promoted={promoted} products={all_products} switchSwapper={this.switchSwapper} /> } } />
   

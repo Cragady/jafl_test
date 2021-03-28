@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CmsAPI, UrlParser } from '../../utils';
+import { CmsAPI, UrlParser, Misc } from '../../utils';
 import './Product.css';
 
 export class Product extends Component {
@@ -47,7 +47,7 @@ export class Product extends Component {
                     <img className="Product-img img-fluid mb-3" src={CmsAPI.CmsUrl + picture[0].url} alt={"Product image " + name} />
                     <h2>Description</h2>
                     <p className="Product-description rounded p-3">{description}</p>
-                    <p><span className="Product-point-text">Price:</span> {price}</p>
+                    <p><span className="Product-point-text">Price:</span> {Misc.readablePrice(price)}</p>
                     <p><span className="Product-point-text">Available:</span> {quantity}</p>
                     <button className="btn btn-primary Product-btn mb-3" 
                         onClick={() => this.addProduct(quantity, {
@@ -55,8 +55,7 @@ export class Product extends Component {
                             price: price, 
                             name: name, 
                             picture: picture
-                        })
-                        }>
+                    })}>
                         Add to Cart
                     </button>
                 </div>

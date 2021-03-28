@@ -1,3 +1,4 @@
+import { Misc } from '../../utils'
 import './Transaction.css';
 
 export const Transaction = function(props) {
@@ -7,7 +8,7 @@ export const Transaction = function(props) {
         <section className="Transaction-section rounded">
             <p>id: {id}</p>
             <p>number_of_items: {items}</p>
-            <p>total: {total}</p>
+            <p>total: ${Misc.readablePrice(total)}</p>
         </section>
     )
 }

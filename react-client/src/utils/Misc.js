@@ -20,8 +20,13 @@ export const Misc = {
         // price[1] = parseFloat("." + price[1]).toFixed(2).split('.')[1];
         
         // return price.join('.'); // doesn't work lol keeping for reference though
-
+        
         price = price.toString().split(".");
+
+        if(price.length === 1){
+            price[1] = "00";
+        }
+        
         price[1] = parseFloat("." + price[1]).toFixed(2).split('.')[1];
         price[0] = price[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         return price.join('.');
